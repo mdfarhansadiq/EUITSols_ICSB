@@ -53,6 +53,8 @@ class AboutController extends Controller
 
         $data->save();
 
-        return redirect('/about/view');
+        $data = AboutModel::all();
+
+        return response()->json($data);
     }
 }
